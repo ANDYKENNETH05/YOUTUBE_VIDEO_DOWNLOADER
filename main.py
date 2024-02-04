@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import tkinter as tk
 from pytube import YouTube
 import customtkinter
@@ -29,3 +30,15 @@ def startDownload(option):
     except:
         finishLabel.configure(text="Download Error", text_color="red")
 
+=======
+import tkinter
+from pytube import YouTube
+from tkinter import *
+
+app = Tk()
+app.title("YOUTUBE VIDEO DOWNLOADER")
+app.config(background="green")
+app.geometry("600x400")
+
+app.mainloop()
+>>>>>>> 81f6ac77b30f05d2a547dfae03dff86cc8497363
