@@ -3,7 +3,7 @@ import customtkinter
 from pytube import YouTube
 from tkinter import filedialog
 
-customtkinter.set_appearance_mode("dark")
+customtkinter.set_appearance_mode("system")
 customtkinter.set_default_color_theme("dark-blue")
 
 app = customtkinter.CTk()
@@ -39,7 +39,7 @@ def start_download(option):
         finishLabel.configure(text="Download Error", text_color="red")
 
 
-def on_progress(stream, chunk, bytes_remaining):
+def on_progress(Stream, chunk, Bytes_remaining):
     total_size = stream.filesize
     bytes_download = total_size - bytes_remaining
     perecentage_of_completion = bytes_download / total_size * 100
@@ -56,6 +56,9 @@ url_var = tk.StringVar()
 link = customtkinter.CTkEntry(app, width=400, height=30, placeholder_text="paste video link here....",
                               textvariable=url_var)
 link.pack()
+
+finishLabel = customtkinter.CTkLabel(app, text="")
+finishLabel.pack()
 
     # Update ProgressBar
 
