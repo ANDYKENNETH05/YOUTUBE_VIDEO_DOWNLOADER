@@ -1,7 +1,4 @@
-import tkinter as tk
-from pytube import YouTube
-import customtkinter
-from tkinter import filedialog
+
 
 def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
