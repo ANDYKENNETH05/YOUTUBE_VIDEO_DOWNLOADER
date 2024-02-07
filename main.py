@@ -39,7 +39,7 @@ def start_download(option):
         finishLabel.configure(text="Download Error", text_color="red")
 
 
-def on_progress(Stream, chunk, Bytes_remaining):
+def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
     bytes_download = total_size - bytes_remaining
     perecentage_of_completion = bytes_download / total_size * 100
@@ -60,9 +60,6 @@ link.pack()
 finishLabel = customtkinter.CTkLabel(app, text="")
 finishLabel.pack()
 
-    # Update ProgressBar
-
-# Progress Percentage
 progress = customtkinter.CTkLabel(app, text="0%")
 progress.pack()
 
