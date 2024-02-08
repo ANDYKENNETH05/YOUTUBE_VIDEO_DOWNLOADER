@@ -53,7 +53,8 @@ title = customtkinter.CTkLabel(app, text="INSERT YOUTUBE LINK", font=("times new
 title.pack(padx=10, pady=10)
 
 url_var = tk.StringVar()
-link = customtkinter.CTkEntry(app, width=400, height=30, placeholder_text="paste video link here....",
+link = customtkinter.CTkEntry(app, width=400, height=30,
+                              placeholder_text="paste video link here....",
                               textvariable=url_var)
 link.pack()
 
@@ -67,18 +68,27 @@ progressbar = customtkinter.CTkProgressBar(app, width=400)
 progressbar.set(0)
 progressbar.pack(padx=10, pady = 10)
 
-download = customtkinter.CTkButton(app, text="DOWNLOAD HIGH QUALITY-mp4", corner_radius=20, hover_color="green",
+download = customtkinter.CTkButton(app, text="DOWNLOAD HIGH QUALITY-mp4",
+                                   corner_radius=20, hover_color="green",
                                    border_width=2,
-                                   border_color="black", command=lambda: start_download("hq"))
+                                   border_color="black",
+                                   command=lambda: start_download("hq"))
 download.pack(padx=10, pady=10)
 
-download2 = customtkinter.CTkButton(app, text="DOWNLOAD low QUALITY-mp4", corner_radius=20, hover_color="green",
+download2 = customtkinter.CTkButton(app, text="DOWNLOAD low QUALITY-mp4", 
+                                    corner_radius=20,
+                                    hover_color="green",
                                     border_width=2,
-                                    border_color="black", command=lambda: start_download("lq"))
+                                    border_color="black",
+                                    command=lambda: start_download("lq"))
 download2.pack(padx=10, pady=10)
 
-download3 = customtkinter.CTkButton(app, text="DOWNLOAD mp3", corner_radius=20, hover_color="green", border_width=2,
-                                    border_color="black", command=lambda: start_download("audio"))
+download3 = customtkinter.CTkButton(app,
+                                    text="DOWNLOAD mp3",
+                                    corner_radius=20,
+                                    hover_color="green", border_width=2,
+                                    border_color="black",
+                                    command=lambda: start_download("audio"))
 download3.pack(padx=10, pady=10)
 
 app.mainloop()
